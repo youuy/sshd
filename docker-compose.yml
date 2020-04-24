@@ -1,0 +1,10 @@
+version: '3.4'
+services:
+  sshd:
+    container_name: sshd
+    image: youuy/sshd
+    environment: 
+      AUTHORIZED_KEYS: "replace with your public key"
+    restart: unless-stopped
+    ports:
+      - '60022:22'
